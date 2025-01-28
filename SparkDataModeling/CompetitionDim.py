@@ -9,9 +9,11 @@ from pyspark.sql.types import StringType
 
 class CompetitionDim:
     def __init__(self, spark):
+        # Initialize the Spark session
         self.spark = spark
     
     def get_competition_dim(self, competition_df):
+        # Extract the competition dimension
         competition_dim = competition_df.select(
             col("competition_id"),
             col("name"),
