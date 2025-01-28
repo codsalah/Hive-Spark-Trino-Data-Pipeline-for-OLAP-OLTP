@@ -5,12 +5,14 @@ import os
 
 
 def create_spark_session(app_name="Data Analysis"):
+    # Create a Spark session
     spark = SparkSession.builder \
         .appName(app_name) \
         .getOrCreate()
     return spark
 
 def read_csv(spark, path, header=True, inferSchema=True):
+    # Read CSV file
     df = spark.read.csv(path, header=header, inferSchema=inferSchema)
     return df
 
