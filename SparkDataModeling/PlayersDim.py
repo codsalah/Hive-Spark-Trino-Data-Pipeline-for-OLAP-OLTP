@@ -1,7 +1,7 @@
 import os
 import sys
 from pyspark.sql import SparkSession
-from pyspark.sql.functions import col, sum as _sum
+from pyspark.sql.functions import col, sum as _sum, year
 from pyspark.sql.types import IntegerType
 from SparkDataExploration.utils import (
     read_csv, create_spark_session,
@@ -13,12 +13,17 @@ class PlayerDim:
         self.spark = spark
     
     def get_player_dim(self, player_df, appearances_df):
-        player_stats = appearances_df.groupBy("player_id").agg(
+        # Extract year from the date column
+        appearances_df = appearances_df.withColumn("year", year("date"))
+
+        # Grouping by player_id and year to get stats for each year
+        player_stats = appearances_df.groupBy("player_id", "year").agg(
             _sum("goals").alias("total_goals"),
             _sum("assists").alias("total_assists"),
             _sum("minutes_played").alias("total_minutes_played")
         )
 
+        # Join with the player DataFrame and select relevant columns
         players_dim = player_df.join(player_stats, "player_id", how="left").select(
             col("player_id").cast(IntegerType()),
             col("name"),
@@ -36,6 +41,7 @@ class PlayerDim:
             col("total_goals").cast(IntegerType()),
             col("total_assists").cast(IntegerType()),
             col("total_minutes_played").cast(IntegerType()),
+            col("year"),
             col("current_club_domestic_competition_id").alias("player_club_domestic_competition_id")
         )
         
