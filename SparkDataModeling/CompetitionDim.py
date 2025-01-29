@@ -42,7 +42,7 @@ if __name__ == "__main__":
     print_table(competition_dim, "Competition Dimension")
     
     # Save the competition dimension in CSV, Parquet, and Avro formats
-    output_path = os.path.abspath("../DataSchema/Star_schema") 
+    output_path = os.path.abspath("./DataSchema/Star_schema") 
     save_to_multiple_formats(competition_dim, "CompetitionDim", output_path)
     
     # Stop the Spark session
