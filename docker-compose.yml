@@ -1,0 +1,124 @@
+version: "3.7"
+
+services:
+  # Hadoop HDFS Core
+  namenode:
+    image: bde2020/hadoop-namenode:2.0.0-hadoop2.7.4-java8
+    hostname: namenode
+    environment:
+      - CLUSTER_NAME=transfer_analytics
+      - CORE_CONF_fs_defaultFS=hdfs://namenode:8020
+    volumes:
+      - hadoop_namenode:/hadoop/dfs/name
+      - /home/codsalah/Documents/git_repos/Hive-Based_TransferMarket_Data_Modeling/DataSchema:/data  # Mount local data directory
+    ports:
+      - 9870:9870  # Namenode Web UI
+    networks:
+      - spark_net
+
+  datanode:
+    image: bde2020/hadoop-datanode:2.0.0-hadoop2.7.4-java8
+    depends_on:
+      - namenode
+    environment:
+      - CORE_CONF_fs_defaultFS=hdfs://namenode:8020
+    volumes:
+      - hadoop_datanode:/hadoop/dfs/data
+    networks:
+      - spark_net
+
+  # Hive Metastore (PostgreSQL)
+  hive-metastore:
+    image: postgres:11
+    environment:
+      POSTGRES_USER: hive
+      POSTGRES_PASSWORD: hive
+      POSTGRES_DB: metastore
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - spark_net
+
+  # Hive Server
+  hive-server:
+    image: bde2020/hive:2.3.2-postgresql-metastore
+    depends_on:
+      - hive-metastore
+      - namenode
+    environment:
+      HIVE_CORE_CONF_javax_jdo_option_ConnectionURL: jdbc:postgresql://hive-metastore/metastore
+      HIVE_SITE_CONF_hive_metastore_uris: thrift://hive-metastore:9083
+    networks:
+      - spark_net
+
+  # Spark Cluster
+  spark-master:
+    image: bitnami/spark:2.4.5
+    hostname: spark-master
+    environment:
+      - SPARK_MODE=master
+      - SPARK_RPC_AUTHENTICATION_ENABLED=no
+      - SPARK_LOCAL_IP=spark-master
+      - SPARK_MASTER_PORT=7077
+      - SPARK_MASTER_WEBUI_PORT=8080
+    ports:
+      - 8080:8080
+      - 7077:7077
+    networks:
+      - spark_net
+
+  spark-worker:
+    image: bitnami/spark:2.4.5
+    depends_on:
+      - spark-master
+    environment:
+      - SPARK_MODE=worker
+      - SPARK_MASTER_URL=spark://spark-master:7077
+      - SPARK_WORKER_MEMORY=4G
+      - SPARK_LOCAL_IP=spark-worker
+    scale: 2
+    networks:
+      - spark_net
+
+  # Trino (Presto)
+  trino:
+    image: trinodb/trino:latest
+    hostname: trino
+    depends_on:
+      - hive-server
+      - hive-metastore
+    volumes:
+      - ./trino-config:/etc/trino  # Mount custom Trino configuration
+    ports:
+      - 8081:8080  # Trino Web UI
+    networks:
+      - spark_net
+
+  # Jupyter with Hive/Spark Integration
+  jupyter:
+    image: jupyter/all-spark-notebook:latest
+    depends_on:
+      - spark-master
+      - hive-server
+      - namenode
+      - trino
+    volumes:
+      - ./notebooks:/home/jovyan/work
+      - ./data:/data
+    environment:
+      - SPARK_MASTER=spark://spark-master:7077
+      - HIVE_SERVER2_THRIFT_BIND_HOST=hive-server
+    ports:
+      - 8888:8888
+      - 4040-4045:4040-4045
+    networks:
+      - spark_net
+
+volumes:
+  hadoop_namenode:
+  hadoop_datanode:
+  postgres_data:
+
+networks:
+  spark_net:
+    driver: bridge
