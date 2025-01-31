@@ -1,6 +1,9 @@
 from pyspark.sql import SparkSession
 from pyspark.sql.functions import col
-from SparkDataExploration.utils import (
+import sys
+sys.path.append('/root/Hive-Based_TransferMarket_Data_Modeling/SparkDataExploration')
+
+from Hive-Based_TransferMarket_Data_Modeling.SparkDataExploration.utils import (
     read_csv, create_spark_session, schema_insights, print_header,
     print_table, save_to_multiple_formats
 )
