@@ -1,10 +1,7 @@
 import os
 from pyspark.sql import SparkSession 
 from pyspark.sql.functions import col, when, year, sum
-<<<<<<< HEAD
 from pyspark.sql.functions import col, sum, coalesce, lit, year
-=======
->>>>>>> 8237a0ec5d8123b3c0a090ed439ea0fbf16b08a8
 
 # Import helper functions from your utilities module.
 # Adjust the module path as needed.
@@ -31,7 +28,6 @@ class TransferFact:
             sum(col(column_name)).alias("total_" + column_name + "_for_player_in_club")
         )
         return df
-<<<<<<< HEAD
     ############################### Net Club ##############################################
     def join_from_club(self):
         return self.transfers_df \
@@ -71,16 +67,6 @@ class TransferFact:
         net_club_df = self.net_club()
 
         # Existing aggregations
-=======
-
-    def get_transfer_fact(self):
-        """
-        Joins transfers, players, and aggregated performance metrics to create
-        the transfer fact table. Club IDs are cast as strings to ensure consistency
-        with the clubs dimension.
-        """
-        # Aggregate performance metrics by club.
->>>>>>> 8237a0ec5d8123b3c0a090ed439ea0fbf16b08a8
         from_club_goals = self.player_appearances_per_club("goals", "player_club_id").alias("from_club_goals")
         to_club_goals = self.player_appearances_per_club("goals", "player_current_club_id").alias("to_club_goals")
         from_club_assists = self.player_appearances_per_club("assists", "player_club_id").alias("from_club_assists")
@@ -88,7 +74,6 @@ class TransferFact:
         from_club_total_minutes = self.player_appearances_per_club("minutes_played", "player_club_id").alias("from_club_total_minutes")
         to_club_total_minutes = self.player_appearances_per_club("minutes_played", "player_current_club_id").alias("to_club_total_minutes")
 
-<<<<<<< HEAD
         # Main fact table construction
         transfer_fact_df = self.transfers_df.alias("t") \
             .join(self.players_df.alias("p"), "player_id", "left") \
@@ -118,49 +103,6 @@ class TransferFact:
             .withColumn("transfer_fee_ratio", when(col("t.market_value_in_eur") > 0, 
                                                    col("t.transfer_fee") / col("t.market_value_in_eur"))) \
             .withColumn("net_transfer", col("from_net.net_transfer_record") - col("to_net.net_transfer_record")) \
-=======
-        transfer_fact_df = self.transfers_df.alias("t") \
-            .join(self.players_df.alias("p"), "player_id", "left") \
-            .join(
-                from_club_goals,
-                (col("t.player_id") == col("from_club_goals.player_id")) &
-                (col("t.from_club_id") == col("from_club_goals.player_club_id")),
-                "left"
-            ) \
-            .join(
-                to_club_goals,
-                (col("t.player_id") == col("to_club_goals.player_id")) &
-                (col("t.to_club_id") == col("to_club_goals.player_current_club_id")),
-                "left"
-            ) \
-            .join(
-                from_club_assists,
-                (col("t.player_id") == col("from_club_assists.player_id")) &
-                (col("t.from_club_id") == col("from_club_assists.player_club_id")),
-                "left"
-            ) \
-            .join(
-                to_club_assists,
-                (col("t.player_id") == col("to_club_assists.player_id")) &
-                (col("t.to_club_id") == col("to_club_assists.player_current_club_id")),
-                "left"
-            ) \
-            .join(
-                from_club_total_minutes,
-                (col("t.player_id") == col("from_club_total_minutes.player_id")) &
-                (col("t.from_club_id") == col("from_club_total_minutes.player_club_id")),
-                "left"
-            ) \
-            .join(
-                to_club_total_minutes,
-                (col("t.player_id") == col("to_club_total_minutes.player_id")) &
-                (col("t.to_club_id") == col("to_club_total_minutes.player_current_club_id")),
-                "left"
-            ) \
-            .withColumn("player_age_at_transfer", year(col("t.transfer_date")) - year(col("p.date_of_birth"))) \
-            .withColumn("transfer_profit_loss", col("t.transfer_fee") - col("t.market_value_in_eur")) \
-            .withColumn("transfer_fee_ratio", when(col("t.market_value_in_eur") > 0, col("t.transfer_fee") / col("t.market_value_in_eur"))) \
->>>>>>> 8237a0ec5d8123b3c0a090ed439ea0fbf16b08a8
             .select(
                 col("t.player_id"),
                 col("t.from_club_id").cast("string").alias("from_club_id"),
@@ -178,17 +120,11 @@ class TransferFact:
                 col("from_club_assists.total_assists_for_player_in_club").alias("total_assists_in_previous_club"),
                 col("to_club_assists.total_assists_for_player_in_club").alias("total_assists_in_current_club"),
                 col("from_club_total_minutes.total_minutes_played_for_player_in_club").alias("total_minutes_in_previous_club"),
-<<<<<<< HEAD
                 col("to_club_total_minutes.total_minutes_played_for_player_in_club").alias("total_minutes_in_current_club"),
                 col("from_net.net_transfer_record").alias("from_club_net"),  # Net for selling club
                 col("to_net.net_transfer_record").alias("to_club_net"),     # Net for buying club
                 col("net_transfer")  # Difference between from_club_net and to_club_net
             )
-=======
-                col("to_club_total_minutes.total_minutes_played_for_player_in_club").alias("total_minutes_in_current_club")
-            )
-
->>>>>>> 8237a0ec5d8123b3c0a090ed439ea0fbf16b08a8
         return transfer_fact_df
 
 if __name__ == "__main__":
@@ -213,8 +149,4 @@ if __name__ == "__main__":
     save_to_multiple_formats(transfer_fact_df, "TransferFact", output_path)
 
     # Stop the Spark session.
-<<<<<<< HEAD
     spark.stop()
-=======
-    spark.stop()
->>>>>>> 8237a0ec5d8123b3c0a090ed439ea0fbf16b08a8
