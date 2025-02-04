@@ -28,7 +28,7 @@ class TransferFact:
             sum(col(column_name)).alias("total_" + column_name + "_for_player_in_club")
         )
         return df
-    ############################### Net Club ################################
+    ############################### Net Club ##############################################
     def join_from_club(self):
         return self.transfers_df \
             .withColumn("year", year("transfer_date")) \
