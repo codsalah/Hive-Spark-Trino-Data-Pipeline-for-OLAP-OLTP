@@ -35,3 +35,16 @@ DataSchema/Star_schema/PlayersDim_parquet/.part-00002-97708c2f-ab60-40d6-8663-e9
 DataSchema/Star_schema/PlayersDim_parquet/part-00000-97708c2f-ab60-40d6-8663-e9c8496fbd42-c000.snappy.parquet
 DataSchema/Star_schema/PlayersDim_parquet/part-00001-97708c2f-ab60-40d6-8663-e9c8496fbd42-c000.snappy.parquet
 DataSchema/Star_schema/PlayersDim_parquet/part-00002-97708c2f-ab60-40d6-8663-e9c8496fbd42-c000.snappy.parquet
+DataSchema/Star_schema/TransferFact_avro
+DataSchema/Star_schema/TransferFact_csv/_SUCCESS
+DataSchema/Star_schema/TransferFact_csv/._SUCCESS.crc
+DataSchema/Star_schema/TransferFact_csv/.part-00000-51b88741-8659-49e5-8dd1-6f8b9298f86e-c000.csv.crc
+DataSchema/Star_schema/TransferFact_csv/.part-00001-51b88741-8659-49e5-8dd1-6f8b9298f86e-c000.csv.crc
+DataSchema/Star_schema/TransferFact_csv/part-00000-51b88741-8659-49e5-8dd1-6f8b9298f86e-c000.csv
+DataSchema/Star_schema/TransferFact_csv/part-00001-51b88741-8659-49e5-8dd1-6f8b9298f86e-c000.csv
+DataSchema/Star_schema/TransferFact_parquet/_SUCCESS
+DataSchema/Star_schema/TransferFact_parquet/._SUCCESS.crc
+DataSchema/Star_schema/TransferFact_parquet/.part-00000-7ceb6a5f-2f2a-4d24-aa02-461bdc8b8c85-c000.snappy.parquet.crc
+DataSchema/Star_schema/TransferFact_parquet/.part-00001-7ceb6a5f-2f2a-4d24-aa02-461bdc8b8c85-c000.snappy.parquet.crc
+DataSchema/Star_schema/TransferFact_parquet/part-00000-7ceb6a5f-2f2a-4d24-aa02-461bdc8b8c85-c000.snappy.parquet
+DataSchema/Star_schema/TransferFact_parquet/part-00001-7ceb6a5f-2f2a-4d24-aa02-461bdc8b8c85-c000.snappy.parquet
