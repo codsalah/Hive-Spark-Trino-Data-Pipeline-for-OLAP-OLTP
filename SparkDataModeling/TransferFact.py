@@ -7,6 +7,7 @@ from pyspark.sql.functions import col, sum, coalesce, lit, year
 # Adjust the module path as needed.
 from SparkDataExploration.utils import create_spark_session, read_csv, print_table, save_to_multiple_formats
 
+
 class TransferFact:
     def __init__(self, spark):
         self.spark = spark
@@ -19,15 +20,21 @@ class TransferFact:
         self.players_df = read_csv(self.spark, players_path)
         self.appearances_df = read_csv(self.spark, appearances_path)
 
-    def player_appearances_per_club(self, column_name, club_type):
+    def player_appearances_per_club(self, column_name,club_id, after_transfer=False):
         """
         Aggregates a performance metric (e.g., goals, assists, minutes_played)
         by player and club.
         """
-        df = self.appearances_df.groupBy("player_id", club_type).agg(
+        df= self.appearances_df
+        if after_transfer:
+            df_dates= df.select("player_id", "date", column_name,club_id)
+        
+        df_agg = df.groupBy("player_id",club_id).agg(
             sum(col(column_name)).alias("total_" + column_name + "_for_player_in_club")
         )
-        return df
+        if after_transfer:
+            df_agg = df_agg.join(df_dates, on=['player_id',club_id], how="left" )
+        return df_agg
     ############################### Net Club ##############################################
     def join_from_club(self):
         return self.transfers_df \
@@ -61,34 +68,46 @@ class TransferFact:
              col("total_income") - col("total_expenditure")
          ) \
          .select("club_id", "year", "net_transfer_record")
-
+         
     def get_transfer_fact(self):
         # Get net club records first
         net_club_df = self.net_club()
 
         # Existing aggregations
         from_club_goals = self.player_appearances_per_club("goals", "player_club_id").alias("from_club_goals")
-        to_club_goals = self.player_appearances_per_club("goals", "player_current_club_id").alias("to_club_goals")
+        to_club_goals = self.player_appearances_per_club("goals", "player_club_id",after_transfer=True).alias("to_club_goals")
         from_club_assists = self.player_appearances_per_club("assists", "player_club_id").alias("from_club_assists")
-        to_club_assists = self.player_appearances_per_club("assists", "player_current_club_id").alias("to_club_assists")
+        to_club_assists = self.player_appearances_per_club("assists", "player_club_id",after_transfer=True).alias("to_club_assists")
         from_club_total_minutes = self.player_appearances_per_club("minutes_played", "player_club_id").alias("from_club_total_minutes")
-        to_club_total_minutes = self.player_appearances_per_club("minutes_played", "player_current_club_id").alias("to_club_total_minutes")
+        to_club_total_minutes = self.player_appearances_per_club("minutes_played", "player_club_id",after_transfer=True).alias("to_club_total_minutes")
 
+        print("to_goals_schema")
+        to_club_goals.printSchema()
         # Main fact table construction
         transfer_fact_df = self.transfers_df.alias("t") \
             .join(self.players_df.alias("p"), "player_id", "left") \
-            .join(from_club_goals, (col("t.player_id") == col("from_club_goals.player_id")) & 
+            .join(from_club_goals,
+                  (col("t.player_id") == col("from_club_goals.player_id")) & 
                   (col("t.from_club_id") == col("from_club_goals.player_club_id")), "left") \
-            .join(to_club_goals, (col("t.player_id") == col("to_club_goals.player_id")) & 
-                  (col("t.to_club_id") == col("to_club_goals.player_current_club_id")), "left") \
-            .join(from_club_assists, (col("t.player_id") == col("from_club_assists.player_id")) & 
+            .join(to_club_goals, 
+                  (col("t.player_id") == col("to_club_goals.player_id")) & 
+                  (col("t.to_club_id") == col("to_club_goals.player_club_id")) &
+                  (col("to_club_goals.date") >= col ("t.transfer_date")),
+            "left") \
+            .join(from_club_assists, 
+                  (col("t.player_id") == col("from_club_assists.player_id")) & 
                   (col("t.from_club_id") == col("from_club_assists.player_club_id")), "left") \
-            .join(to_club_assists, (col("t.player_id") == col("to_club_assists.player_id")) & 
-                  (col("t.to_club_id") == col("to_club_assists.player_current_club_id")), "left") \
-            .join(from_club_total_minutes, (col("t.player_id") == col("from_club_total_minutes.player_id")) & 
+            .join(to_club_assists, 
+                  (col("t.player_id") == col("to_club_assists.player_id")) & 
+                  (col("t.to_club_id") == col("to_club_assists.player_club_id")) &
+                  (col("to_club_assists.date") >= col ("t.transfer_date")), "left") \
+            .join(from_club_total_minutes, 
+                  (col("t.player_id") == col("from_club_total_minutes.player_id")) & 
                   (col("t.from_club_id") == col("from_club_total_minutes.player_club_id")), "left") \
-            .join(to_club_total_minutes, (col("t.player_id") == col("to_club_total_minutes.player_id")) & 
-                  (col("t.to_club_id") == col("to_club_total_minutes.player_current_club_id")), "left") \
+            .join(to_club_total_minutes, 
+                  (col("t.player_id") == col("to_club_total_minutes.player_id")) & 
+                  (col("t.to_club_id") == col("to_club_total_minutes.player_club_id")) &
+                  (col("to_club_total_minutes.date") >= col ("t.transfer_date")), "left") \
             .withColumn("transfer_year", year(col("t.transfer_date"))) \
             .join(net_club_df.alias("from_net"), 
                   (col("t.from_club_id") == col("from_net.club_id")) & 

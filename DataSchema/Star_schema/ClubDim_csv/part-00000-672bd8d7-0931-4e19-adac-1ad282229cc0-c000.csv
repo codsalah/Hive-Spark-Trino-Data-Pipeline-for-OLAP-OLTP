@@ -1,0 +1,440 @@
+club_id,name,squad_size,average_age,foreigners_number,foreigners_percentage,national_team_players,last_season
+105,SV Darmstadt 98,27,25.6,13,48.1,1,2023
+11127,Ural Yekaterinburg,30,26.5,11,36.7,3,2023
+114,Beşiktaş Jimnastik Kulübü,31,26.5,16,51.6,7,2024
+12,Associazione Sportiva Roma,25,26.1,18,72.0,18,2024
+148,Tottenham Hotspur Football Club,30,25.1,20,66.7,19,2024
+157,Koninklijke Atletiek Associatie Gent,30,25.1,20,66.7,7,2024
+1894,Hvidovre IF,25,26.4,3,12.0,2,2023
+190,Football Club København,29,25.9,18,62.1,9,2024
+192,Roda JC Kerkrade,25,24.0,9,36.0,0,2017
+19789,Yeni Malatyaspor,10,22.9,1,10.0,0,2021
+2079,Veria NPS,29,24.3,4,13.8,0,2016
+21957,AO Platanias,0,,0,,0,2017
+2414,AC Horsens,19,25.1,9,47.4,4,2022
+2457,B SAD,25,24.2,13,52.0,4,2021
+2578,Saint Johnstone Football Club,29,25.4,20,69.0,2,2024
+269,Kieler Sportvereinigung Holstein von 1900,30,25.9,12,40.0,2,2024
+2727,Oud-Heverlee Leuven,25,24.7,13,52.0,2,2024
+28643,SK Beveren,27,26.8,16,59.3,3,2020
+2990,Académica Coimbra,26,25.2,6,23.1,0,2015
+3057,Royal Standard Club de Liège,28,24.0,16,57.1,8,2024
+3690,SKA Khabarovsk,27,25.7,4,14.8,0,2017
+4795,FC Ingolstadt 04,28,24.3,8,28.6,1,2016
+511,Dundee Football Club,29,26.0,16,55.2,2,2024
+5358,SD Huesca,24,27.5,8,33.3,2,2020
+603,Cardiff City,28,25.5,24,85.7,8,2018
+60551,SC Dnipro-1,0,0.0,0,,0,2023
+6996,Goverla Uzhgorod (- 2016),0,,0,,0,2015
+8024,Futebol Clube de Arouca,27,26.1,19,70.4,2,2024
+868,MKE Ankaragücü,34,26.2,13,38.2,6,2023
+903,Hibernian Football Club,26,26.8,21,80.8,5,2024
+969,Montpellier Hérault Sport Club,27,26.7,17,63.0,8,2024
+989,Association Football Club Bournemouth,25,24.9,19,76.0,14,2024
+993,Córdoba CF,24,27.9,4,16.7,0,2014
+1025,Bologna Football Club 1909,29,25.9,21,72.4,14,2024
+1082,Lille Olympique Sporting Club,26,26.9,18,69.2,13,2024
+1160,Nîmes Olympique,26,25.4,12,46.2,3,2020
+11688,Giresunspor,17,22.5,1,5.9,1,2022
+124,Rangers Football Club,30,25.3,24,80.0,10,2024
+1465,Grupo Desportivo Estoril Praia,22,25.3,15,68.2,4,2024
+2477,Karpaty Lviv (-2021),0,,0,,0,2019
+2553,Kilmarnock Football Club,23,27.4,8,34.8,2,2024
+2672,APO Levadiakos Football Club,30,27.2,17,56.7,2,2024
+2740,Vorskla Poltava,25,25.3,3,12.0,0,2024
+3008,Hull City,28,25.0,17,60.7,6,2016
+31,Liverpool Football Club,25,26.4,18,72.0,22,2024
+336,Sporting Clube de Portugal,27,24.5,15,55.6,13,2024
+3911,Stade brestois 29,25,27.3,10,40.0,6,2024
+4,1.FC Nuremberg,33,25.2,7,21.2,2,2018
+410,Udinese Calcio,34,25.6,30,88.2,11,2024
+41231,FC Sochi,27,25.3,7,25.9,1,2023
+4128,Amkar Perm,26,26.0,0,,0,2017
+449,Trabzonspor Kulübü,31,25.9,13,41.9,9,2024
+4603,AE Larisa,28,24.2,6,21.4,0,2020
+55686,Metalist 1925 Kharkiv,32,25.7,2,6.3,0,2023
+566,Beerschot AC,0,,0,,0,2012
+595,SC Bastia,25,27.6,8,32.0,6,2016
+6890,İstanbul Başakşehir Futbol Kulübü,32,26.8,16,50.0,7,2024
+7185,Panthrakikos Komotini,29,24.3,3,10.3,0,2015
+83678,Metalist Kharkiv,25,26.1,7,28.0,0,2022
+932,"\"Футбольный клуб \"\"Локомотив\"\" Москва\"",28,24.3,7,25.0,12,2024
+1010,Watford FC,30,26.3,24,80.0,12,2021
+1108,Deportivo Alavés S.A.D.,24,26.8,10,41.7,4,2024
+1124,FK Fakel Voronezh,25,27.6,5,20.0,1,2024
+1158,FC Lorient,30,25.0,17,56.7,8,2023
+1177,Silkeborg Idrætsforening,21,24.7,5,23.8,2,2024
+13,Club Atlético de Madrid S.A.D.,24,28.9,17,70.8,16,2024
+131,Futbol Club Barcelona,28,24.5,8,28.6,14,2024
+133,SC Cambuur Leeuwarden,16,23.1,4,25.0,3,2022
+141,Galatasaray Spor Kulübü,32,26.6,17,53.1,13,2024
+1411,RAEC Mons (- 2015),0,,0,,0,2013
+169,Panionios Athens,34,23.5,4,11.8,0,2019
+18,Borussia Verein für Leibesübungen 1900 Mönchengladbach,25,26.4,13,52.0,10,2024
+18105,PFK Lviv,3,18.3,0,,0,2022
+2036,1. Fußballclub Heidenheim 1846,28,26.7,4,14.3,1,2024
+273,Stade Rennais Football Club,25,25.8,16,64.0,11,2024
+3325,GD Chaves,29,25.8,17,58.6,1,2023
+3327,FC Penafiel,28,27.9,4,14.3,0,2014
+366,Real Valladolid Club de Fútbol S.A.D.,23,26.5,14,60.9,6,2024
+4294,Sporting Clube Farense,27,27.0,15,55.6,3,2024
+44006,Bodrumspor Spor Faaliyetleri Anonim Şirketi,32,26.2,13,40.6,5,2024
+458,Palermo FC,28,25.6,7,25.0,4,2016
+46,Football Club Internazionale Milano S.p.A.,26,29.4,19,73.1,16,2024
+5220,GS Ergotelis,3,23.3,0,,0,2014
+5572,Niki Volou,26,27.2,7,26.9,2,2014
+5817,Sønderjyske Fodbold,27,24.6,12,44.4,3,2024
+605,Aris Thessalonikis,28,28.7,25,89.3,3,2024
+995,Football Club de Nantes,26,26.9,14,53.8,7,2024
+1003,Leicester City Football Club,30,26.5,21,70.0,14,2024
+1047,Calcio Como,36,27.0,22,61.1,3,2024
+1237,Brighton and Hove Albion Football Club,27,26.0,19,70.4,17,2024
+1436,SC Beira-Mar,26,26.6,8,30.8,0,2012
+1455,FC Dordrecht,29,23.3,12,41.4,1,2014
+14589,FC Orenburg,28,23.9,12,42.9,3,2024
+1519,Dundee United Football Club,23,26.6,14,60.9,5,2024
+16239,Desna Chernigiv,0,,0,,0,2021
+173,Odense Boldklub,25,23.4,12,48.0,6,2023
+200,Football Club Utrecht,29,24.8,19,65.5,3,2024
+206,Brøndby Idrætsforening,27,25.5,11,40.7,3,2024
+2715,RFC Seraing,22,23.5,13,59.1,2,2022
+28956,AEL Kalloni,0,,0,,0,2015
+2969,Dijon FCO,29,25.8,14,48.3,4,2020
+2995,FC Paços de Ferreira,32,25.5,17,50.0,1,2022
+3426,Esbjerg fB,27,22.7,10,37.0,2,2019
+3522,Spezia Calcio,32,24.4,25,78.1,11,2022
+3609,Rotor Volgograd,27,23.9,2,7.4,0,2020
+39097,FK Obolon Kyiv,27,28.1,0,,0,2024
+39722,Erzurumspor FK,28,26.1,7,25.0,1,2020
+40,FC Girondins Bordeaux,26,22.7,13,50.0,6,2021
+41274,Koninklijke Beerschot Voetbalclub Antwerpen,29,24.1,21,72.4,4,2024
+43,Heart of Midlothian Football Club,31,26.2,15,48.4,7,2024
+47,Iraklis Thessaloniki,27,24.3,9,33.3,0,2016
+4750,SC Olhanense,10,23.4,5,50.0,0,2013
+589,Antalyaspor,29,27.2,14,48.3,4,2024
+6,Adanaspor,10,23.9,4,40.0,0,2016
+6195,Società Sportiva Calcio Napoli,24,27.9,13,54.2,12,2024
+82,Verein für Leibesübungen Wolfsburg,30,25.6,20,66.7,13,2024
+1050,Villarreal Club de Fútbol S.A.D.,26,27.1,10,38.5,10,2024
+1096,Royal Antwerp Football Club,22,25.5,10,45.5,3,2024
+1147,AC Ajaccio,24,27.5,11,45.8,6,2022
+130,Parma Calcio 1913,32,25.0,24,75.0,10,2024
+1429,Cesena FC,28,26.0,4,14.3,0,2014
+15,Bayer 04 Leverkusen Fußball,25,26.1,19,76.0,16,2024
+16247,PFK Stal Kamyanske (-2018),0,,0,,0,2017
+20100,FC Vestsjaelland,0,,0,,0,2014
+20698,Balikesirspor,22,22.0,1,4.5,0,2014
+2323,Orduspor,3,20.0,0,,0,2012
+2722,SPAL,32,26.0,8,25.0,2,2019
+276,Verona Hellas Football Club,32,25.2,23,71.9,8,2024
+3329,Futebol Clube de Famalicão,29,24.3,21,72.4,5,2024
+3691,Tom Tomsk,0,,0,,0,2016
+370,Aberdeen Football Club,28,25.6,21,75.0,7,2024
+475,Koninklijke Sint-Truidense Voetbalvereniging,26,25.1,15,57.7,4,2024
+49364,FC Ingulets Petrove,26,25.7,0,,0,2024
+498,KSC Lokeren (- 2020),0,,0,,0,2018
+524,Gaziantepspor (- 2020),0,,0,,0,2016
+553,Ionikos Nikeas,17,28.4,11,64.7,0,2022
+642,De Graafschap Doetinchem,30,23.7,6,20.0,0,2018
+6676,A.G.S Asteras Tripolis,29,27.5,19,65.5,2,2024
+703,Nottingham Forest Football Club,28,26.9,21,75.0,15,2024
+80,Verein für Leibesübungen Bochum 1848 Fußballgemeinschaft,27,27.1,13,48.1,4,2024
+976,CF União Madeira (-2021),0,,0,,0,2015
+1031,Luton Town,30,26.1,16,53.3,7,2023
+1071,Wigan Athletic,26,24.0,8,30.8,2,2012
+1090,Alkmaar Zaanstreek,28,24.0,7,25.0,5,2024
+1110,Huddersfield Town,33,26.7,12,36.4,3,2018
+11126,Mordovia Saransk (-2020),0,,0,,0,2015
+1159,AS Nancy-Lorraine,27,25.7,5,18.5,0,2016
+12438,Volga Nizhniy Novgorod (- 2016),0,,0,,0,2013
+1301,CS Marítimo,29,27.2,19,65.5,2,2022
+1304,Heracles Almelo,30,24.4,15,50.0,3,2024
+1421,Stade de Reims,25,24.7,17,68.0,9,2024
+1423,Valenciennes FC,30,23.6,15,50.0,5,2013
+162,Association sportive de Monaco Football Club,25,24.1,25,100.0,12,2024
+20,Bursaspor,26,21.4,0,,0,2018
+235,Rooms Katholieke Combinatie Waalwijk,30,26.2,13,43.3,4,2024
+24,Eintracht Frankfurt Fußball AG,25,25.1,18,72.0,9,2024
+2441,Athlitiki Enosi Konstantinoupoleos,29,29.1,21,72.4,13,2024
+2861,KV Oostende,26,23.3,14,50.0,2,2022
+294,Sport Lisboa e Benfica,28,24.9,18,64.3,13,2024
+3060,APS Atromitos Athinon,25,26.7,12,48.0,4,2024
+331,Club Atlético Osasuna,22,28.3,2,9.1,3,2024
+3336,Desportivo Aves (- 2020),0,,0,,0,2019
+3709,Getafe Club de Fútbol S.A.D. Team Dubai,24,26.7,12,50.0,3,2024
+383,Eindhovense Voetbalvereniging Philips Sport Vereniging,28,25.2,16,57.1,14,2024
+499,Vitesse Arnhem,25,21.3,5,20.0,0,2023
+610,AFC Ajax Amsterdam,28,25.3,13,46.4,10,2024
+6414,Metalist Kharkiv (- 2016),0,,0,,0,2015
+6993,FK Mariupol,0,,0,,0,2021
+71985,Akron Togliatti,28,24.8,12,42.9,5,2024
+750,FC Sochaux-Montbéliard,29,23.0,9,31.0,1,2013
+762,Newcastle United Football Club,29,28.5,12,41.4,12,2024
+825,Eskisehirspor,41,23.9,1,2.4,0,2015
+86209,FK Livyi Bereh,24,26.0,1,4.2,0,2024
+1041,Olympique Lyonnais,24,26.6,17,70.8,12,2024
+10690,FC Zorya Lugansk,28,24.6,8,28.6,0,2024
+1084,Málaga CF,27,27.9,8,29.6,0,2017
+1148,Brentford Football Club,28,25.1,21,75.0,14,2024
+1162,SM Caen,27,25.7,12,44.4,4,2018
+1184,Koninklijke Racing Club Genk,27,22.7,14,51.9,7,2024
+1186,Torpedo Moscow,28,25.6,6,23.1,3,2022
+128,AO Xanthi,0,,0,,0,2019
+1283,FC Emmen,17,25.6,6,35.3,0,2022
+142,Real Zaragoza,23,26.0,6,26.1,1,2012
+16,Borussia Dortmund,25,25.2,11,44.0,15,2024
+202,Football Club Groningen,31,24.2,12,38.7,4,2024
+2288,Swansea City,22,24.8,17,77.3,4,2017
+237,Real Club Deportivo Mallorca S.A.D.,26,28.2,12,46.2,7,2024
+2381,Sivasspor Kulübü,30,27.9,14,46.7,4,2024
+2423,Clube Desportivo Santa Clara,24,26.3,15,62.5,0,2024
+2425,Rio Ave Futebol Clube,30,23.7,21,70.0,2,2024
+2451,Inverness Caledonian Thistle FC,26,24.5,9,34.6,0,2016
+265,Panathinaikos Athlitikos Omilos,37,28.0,27,73.0,16,2024
+2832,Gaziantep Futbol Kulübü A.Ş.,29,27.2,16,55.2,3,2024
+35,Fußball-Club St. Pauli von 1910,33,26.7,19,57.6,10,2024
+3558,GFC Ajaccio,5,26.8,1,20.0,1,2015
+4102,AC Carpi,25,23.6,6,24.0,1,2015
+42,Hannover 96,28,25.0,6,21.4,1,2018
+641,Middlesbrough FC,25,26.1,8,32.0,6,2016
+667,Racing Club de Strasbourg Alsace,29,22.5,19,65.5,7,2024
+681,Real Sociedad de Fútbol S.A.D.,25,25.4,8,32.0,12,2024
+873,Crystal Palace Football Club,30,25.9,14,46.7,12,2024
+1032,Reading FC,30,23.1,14,46.7,5,2012
+1039,Queens Park Rangers,26,25.9,15,57.7,8,2014
+1244,Club Deportivo Leganés S.A.D.,23,27.5,10,43.5,4,2024
+14171,Thonon Évian Grand Genève FC,27,27.4,6,22.2,1,2014
+16704,FK Krasnodar,22,27.7,14,63.6,10,2024
+19771,Akhisarspor,14,21.0,0,,0,2018
+244,Olympique de Marseille,30,25.6,21,70.0,13,2024
+29228,Royal Excel Mouscron (-2022),0,,0,,0,2020
+3216,Mersin Talimyurdu SK,0,,0,,0,2015
+3508,SV Zulte Waregem,25,25.2,13,52.0,3,2022
+354,Yellow-Red Koninklijke Voetbalclub Mechelen,32,25.8,15,46.9,4,2024
+367,Rayo Vallecano de Madrid S.A.D.,25,29.7,9,36.0,5,2024
+379,West Ham United Football Club,24,28.9,17,70.8,12,2024
+380,US Salernitana 1919,30,24.5,16,53.3,3,2023
+403,Willem II,28,24.4,14,50.0,1,2024
+40426,FC Tosno (-2018),0,,0,,0,2017
+41,Hamburger SV,30,23.6,15,50.0,4,2017
+443,Vejle Boldklub,27,24.8,14,51.9,4,2024
+5724,Randers Fodbold Club,28,25.3,16,57.1,3,2024
+601,Koninklijke Voetbalclub Kortrijk,25,25.0,17,68.0,4,2024
+79,Verein für Bewegungsspiele Stuttgart 1893,34,24.1,15,44.1,13,2024
+86,Sportverein Werder Bremen von 1899,26,26.3,11,42.3,6,2024
+931,Fulham Football Club,25,27.5,19,76.0,11,2024
+964,AO FK Zenit Sankt-Peterburg,27,27.0,13,48.1,9,2024
+1123,Norwich City,25,26.0,17,68.0,12,2021
+1268,ADO Den Haag,34,23.5,9,26.5,4,2020
+1506,Kardemir Karabükspor,0,,0,,0,2017
+1531,Elche CF,18,27.3,5,27.8,0,2022
+2282,Club Brugge Koninklijke Voetbalvereniging,26,24.6,15,57.7,8,2024
+2293,Konyaspor,27,27.8,15,55.6,2,2024
+23611,Olimpik Donetsk,0,,0,,0,2020
+2431,Club Football Estrela da Amadora,32,25.7,16,50.0,2,2024
+2698,FC Rubin Kazan,28,26.1,14,50.0,5,2024
+2760,Partick Thistle FC,19,27.9,1,5.3,0,2017
+2944,Ankaraspor,30,23.8,1,3.3,0,2017
+36,Fenerbahçe Spor Kulübü,30,28.4,14,46.7,15,2024
+385,Fortuna Sittardia Combinatie,25,25.7,18,72.0,0,2024
+468,Sparta Rotterdam,27,24.9,13,48.1,3,2024
+583,Paris Saint-Germain Football Club,24,24.5,16,66.7,18,2024
+621,Athletic Club Bilbao,24,27.2,1,4.2,6,2024
+65,SpVgg Greuther Fürth,28,24.0,11,39.3,2,2021
+6646,Fatih Karagümrük,25,23.0,7,28.0,0,2023
+677,Ipswich Town Football Club,31,26.5,15,48.4,12,2024
+683,Olympiakos Syndesmos Filathlon Peiraios,28,26.1,17,60.7,10,2024
+723,Almere City Football Club,27,26.1,20,74.1,6,2024
+855,EA Guingamp,27,25.4,7,25.9,1,2018
+924,Istanbulspor,32,23.7,11,34.4,3,2023
+968,Koninklijke Voetbal Club Westerlo,31,24.8,22,71.0,6,2024
+985,Manchester United Football Club,29,26.2,19,65.5,19,2024
+11282,Alanyaspor,25,26.6,12,48.0,5,2024
+1132,Burnley FC,28,24.8,18,64.3,8,2023
+1435,Go Ahead Eagles,25,24.4,10,40.0,1,2024
+150,Real Betis Balompié S.A.D.,25,28.2,11,44.0,5,2024
+152,Samsunspor,30,26.2,14,46.7,7,2024
+172,Royal Charleroi Sporting Club,25,24.5,17,68.0,5,2024
+18303,FC Oleksandriya,26,26.3,4,15.4,1,2024
+2410,PFK CSKA Moskva,29,24.9,13,44.8,10,2024
+2503,Boavista Futebol Clube,25,24.3,10,40.0,4,2024
+26459,NK Veres Rivne,23,26.2,6,26.1,1,2024
+2671,PAS Giannina,21,23.8,7,33.3,0,2023
+2700,Anzhi Makhachkala ( -2022),0,,0,,0,2018
+28095,FK Ufa,26,24.4,3,11.5,0,2021
+2999,Hamilton Academical FC,28,22.8,9,32.1,0,2020
+3368,Levante UD,23,27.5,6,26.1,0,2021
+338,Futbolniy Klub Dynamo Kyiv,25,25.5,2,8.0,10,2024
+371,The Celtic Football Club,28,26.4,21,75.0,17,2024
+506,Juventus Football Club,28,25.7,20,71.4,20,2024
+618,Association sportive de Saint-Étienne Loire,27,27.0,12,44.4,5,2024
+6992,ZAO FK Chornomorets Odessa,27,24.1,7,25.9,0,2024
+75231,Dinamo Makhachkala,25,24.6,8,32.0,4,2024
+820,Genclerbirligi Ankara,34,26.1,10,29.4,1,2020
+1083,FK Rostov,25,25.1,8,32.0,8,2024
+1095,ESTAC Troyes,29,23.1,16,57.1,5,2022
+121,FK Dinamo Moskva,24,25.9,14,58.3,9,2024
+1420,Angers Sporting Club de l'Ouest,30,27.1,17,56.7,8,2024
+16245,FK Sevastopol (- 2014),0,,0,,0,2013
+22110,FC Helsingör,23,24.6,4,17.4,1,2017
+23826,RasenBallsport Leipzig,26,25.6,19,73.1,17,2024
+24245,Ümraniyespor,12,25.8,3,30.0,1,2022
+2687,Cádiz CF,26,28.7,6,23.1,2,2023
+2696,PFK Krylya Sovetov Samara,28,26.7,8,28.6,5,2024
+2919,Associazione Calcio Monza,30,27.4,9,30.0,3,2024
+317,Football Club Twente,25,25.2,10,40.0,4,2024
+3209,Pendikspor,30,28.4,6,20.0,1,2023
+339,Dnipro Dnipropetrovsk (-2020),0,,0,,0,2016
+3524,Clermont Foot 63,30,23.9,18,60.0,5,2023
+398,Società Sportiva Lazio S.p.A.,30,26.6,20,66.7,11,2024
+4171,Benevento Calcio,31,26.7,16,51.6,2,2020
+418,Real Madrid Club de Fútbol,23,27.1,17,73.9,16,2024
+49702,FK Nizhny Novgorod,33,24.7,9,27.3,2,2024
+54189,RWD Molenbeek,23,23.2,15,65.2,3,2023
+6574,US Sassuolo,32,23.8,11,34.4,7,2023
+7179,CD Tondela,26,22.8,12,46.2,2,2021
+720,Futebol Clube do Porto,29,25.6,17,58.6,11,2024
+738,Le Havre Athletic Club,31,26.3,18,58.1,7,2024
+89,1. Fußballclub Union Berlin,29,27.3,16,55.2,7,2024
+940,Real Club Celta de Vigo S. A. D.,27,27.2,11,40.7,7,2024
+1387,Siena FC,20,25.5,2,10.0,0,2012
+1390,Cagliari Calcio,24,27.3,11,45.8,8,2024
+1416,Amiens SC,24,24.1,10,41.7,7,2019
+1467,Göztepe Sportif Yatırımlar A.Ş.,30,25.0,16,53.3,3,2024
+167,Fußball-Club Augsburg 1907,28,26.0,17,60.7,9,2024
+232,FK Spartak Moskva,25,26.5,12,48.0,13,2024
+2420,Vitória Sport Clube,25,26.1,11,44.0,3,2024
+2424,Gil Vicente Futebol Clube,26,25.4,19,73.1,4,2024
+2439,Kuban Krasnodar (-2018),0,,0,,0,2015
+2703,Spartak Vladikavkaz (-2020),0,,0,,0,2012
+289,Sunderland AFC,26,23.5,12,46.2,6,2016
+2921,Delfino Pescara 1936,28,24.6,6,21.4,1,2016
+3,1.FC Köln,34,24.6,11,32.4,6,2023
+3719,FK Khimki,27,27.5,13,48.1,2,2024
+3729,Arsenal Tula,27,27.4,2,7.4,1,2021
+3840,Adana Demirspor Kulübü,25,23.5,8,32.0,4,2024
+430,Associazione Calcio Fiorentina,26,26.1,12,46.2,10,2024
+4482,Volyn Lutsk,0,,0,,0,2016
+48726,FC Rukh Lviv,24,22.7,2,8.3,0,2024
+5,Associazione Calcio Milan,26,26.1,19,73.1,14,2024
+512,Stoke City,24,26.7,9,37.5,6,2017
+5818,Hobro IK,22,24.8,4,18.2,2,2019
+60949,Volou Neos Podosferikos Syllogos,30,27.6,18,60.0,2,2024
+678,Aarhus Gymnastik Forening,30,25.9,11,36.7,1,2024
+7775,Hatayspor Futbol Kulübü,27,26.0,13,48.1,6,2024
+826,Racing Club de Lens,27,27.3,17,63.0,10,2024
+8838,Zirka Kropyvnytskyi,7,27.4,0,,0,2017
+897,Deportivo de La Coruña,24,27.7,3,12.5,0,2017
+987,Motherwell Football Club,30,25.8,19,63.3,4,2024
+1063,Viborg Fodsports Forening,23,24.0,11,47.8,3,2024
+1085,Vitória Setúbal FC,29,26.0,10,34.5,0,2019
+11,Arsenal Football Club,24,26.6,18,75.0,18,2024
+126,Çaykur Rizespor Kulübü,27,25.0,15,55.6,7,2024
+1627,Catania FC,27,26.0,5,18.5,0,2013
+16795,Granada CF,24,26.1,8,33.3,4,2023
+204,Lierse SK (- 2018),0,,0,,0,2014
+2227,SK Tavriya Simferopol ( - 2022),0,,0,,0,2013
+2239,US Cremonese,29,25.4,9,30.0,2,2022
+252,Genoa Cricket and Football Club,32,26.3,18,56.3,5,2024
+281,Manchester City Football Club,28,26.9,20,71.4,22,2024
+3302,UD Almería,24,25.2,13,54.2,5,2023
+39,1. Fußball- und Sportverein Mainz 05,25,26.7,11,44.0,7,2024
+3999,PAS Lamia 1964,32,26.9,15,46.9,1,2024
+405,Aston Villa Football Club,25,26.8,18,72.0,17,2024
+441,Apollon Smyrnis,27,27.3,15,55.6,0,2021
+5219,AOK Kerkyra,8,28.1,1,12.5,0,2017
+543,Wolverhampton Wanderers Football Club,32,26.1,27,84.4,17,2024
+60,Sport-Club Freiburg,26,27.3,12,46.2,6,2024
+61825,FC Minaj,25,23.6,1,4.0,0,2023
+63007,LNZ Cherkasy,24,26.4,10,41.7,3,2024
+660,FC Shakhtar Donetsk,31,24.3,12,38.7,12,2024
+6894,Kayseri Erciyesspor,0,,0,,0,2014
+6912,FC Vizela,27,24.6,20,74.1,3,2023
+714,Reial Club Deportiu Espanyol de Barcelona S.A.D.,30,26.2,9,30.0,2,2024
+798,Excelsior Rotterdam,25,22.2,8,32.0,1,2023
+862,Chievo Verona,0,,0,,0,2018
+8970,Frosinone Calcio,31,23.8,15,48.4,5,2023
+9007,Arsenal Kyiv,0,,0,,0,2018
+12321,Girona Fútbol Club S. A. D.,26,27.4,13,50.0,6,2024
+1241,Livingston FC,25,26.9,16,64.0,0,2023
+127,SC Paderborn 07,26,25.7,5,19.2,1,2019
+19,Brescia Calcio,28,25.1,12,42.9,1,2019
+23,Eintracht Braunschweig,30,25.6,11,36.7,2,2013
+33,FC Schalke 04,27,26.4,12,44.4,4,2022
+350,Sheffield United,28,24.2,11,39.3,5,2023
+3592,FK Kryvbas Kryvyi Rig,27,25.0,8,29.6,3,2024
+369,Lyngby Boldklubben af 1921,26,25.6,8,30.8,1,2024
+3725,RFK Akhmat Grozny,28,27.8,13,46.4,7,2024
+41201,PFK Tambov (-2021),0,,0,,0,2020
+472,Unión Deportiva Las Palmas S.A.D.,27,27.7,10,37.0,2,2024
+520,Cercle Brugge Koninklijke Sportvereniging,29,23.1,18,62.1,7,2024
+6418,Panetolikos Agrinio,30,25.3,13,43.3,2,2024
+653,Omilos Filathlon Irakliou FC,34,25.6,13,38.2,2,2024
+6994,Metalurg Zaporizhya (-2016),0,,0,,0,2015
+7378,Portimonense SC,35,23.3,27,77.1,2,2023
+9010,FC Verbroedering Denderhoutem Denderleeuw Eendracht Hekelgem,27,25.9,11,40.7,2,2024
+982,Clube Desportivo Nacional,30,26.5,20,66.7,0,2024
+1005,Unione Sportiva Lecce,34,25.0,29,85.3,8,2024
+1038,UC Sampdoria,33,24.3,5,15.6,4,2022
+1091,Panthessalonikios Athlitikos Omilos Konstantinoupoliton,31,28.8,25,80.6,11,2024
+110302,Avs Futebol SAD,30,27.6,22,73.3,3,2024
+1210,US Livorno 1915,29,24.1,5,17.2,0,2013
+1245,KAS Eupen,25,24.0,16,64.0,6,2023
+1426,VVV-Venlo,28,22.9,7,25.0,0,2020
+1533,SD Eibar,26,28.3,5,19.2,0,2020
+180,Southampton Football Club,32,25.9,17,53.1,11,2024
+19657,Vendsyssel FF,24,25.1,7,29.2,0,2018
+234,Feyenoord Rotterdam,31,24.5,20,64.5,13,2024
+2375,Altay SK,31,25.3,3,9.7,0,2021
+2448,Sporting Gijón,28,26.2,10,35.7,2,2016
+2741,Baltika Kaliningrad,27,24.2,6,22.2,2,2023
+2783,Metalurg Donetsk (- 2015),0,,0,,0,2014
+3205,Kayserispor Kulübü,27,27.9,14,51.9,4,2024
+3349,CD Feirense,24,25.0,11,45.8,2,2018
+3385,Panserraikos Serres,39,25.4,20,51.3,1,2024
+368,Sevilla Fútbol Club S.A.D.,25,25.7,14,56.0,9,2024
+38,Fortuna Düsseldorf,29,25.9,12,41.4,2,2019
+3948,Royale Union Saint-Gilloise,26,25.6,18,69.2,7,2024
+415,Toulouse Football Club,23,25.6,18,78.3,10,2024
+416,Torino Calcio,28,26.5,24,85.7,15,2024
+417,Olympique Gymnaste Club Nice Côte d'Azur,29,25.7,18,62.1,11,2024
+44,Hertha BSC,36,24.1,14,38.9,7,2022
+467,Nijmegen Eendracht Combinatie,29,25.1,12,41.4,2,2024
+53646,FK Polissya Zhytomyr,33,24.9,17,51.5,7,2024
+631,Chelsea Football Club,33,23.9,20,60.6,15,2024
+7160,Eyüp Spor Kulübü,28,28.6,9,32.1,1,2024
+749,Empoli Football Club S.r.l.,27,25.6,15,55.6,4,2024
+833,Denizlispor,27,25.8,3,11.1,1,2020
+865,Fodbold Club Midtjylland,32,24.7,23,71.9,11,2024
+10,Arminia Bielefeld,27,25.3,15,55.6,4,2021
+10484,Kasımpaşa Spor Kulübü,27,26.2,14,51.9,6,2024
+1049,Valencia Club de Fútbol S. A. D.,28,25.8,10,35.7,6,2024
+1053,Aalborg Boldspilklub,26,23.2,15,57.7,1,2024
+1075,Sporting Clube de Braga,26,25.8,15,57.7,2,2024
+1269,Prins Hendrik Ende Desespereert Nimmer Combinatie Zwolle,29,24.9,15,51.7,5,2024
+132,Nooit Opgeven Altijd Doorzetten Aangenaam Door Vermaak En Nuttig Door Ontspanning Combinatie Breda,31,25.5,19,61.3,4,2024
+2292,Elazigspor,28,25.3,0,,0,2013
+27,FC Bayern München,26,27.4,16,61.5,17,2024
+2759,Ross County Football Club,31,25.6,21,67.7,2,2024
+2778,Fodbold Club Nordsjælland,27,23.6,12,44.4,4,2024
+29,Everton Football Club,25,27.6,14,56.0,12,2024
+290,Association de la Jeunesse auxerroise,28,25.2,17,60.7,8,2024
+30120,AE Kifisias,26,26.1,10,38.5,0,2023
+306,Sportclub Heerenveen,32,24.4,20,62.5,7,2024
+3062,Athens Kallithea Football Club,28,27.5,17,60.7,2,2024
+3268,Casa Pia Atlético Clube,28,26.8,15,53.6,3,2024
+347,FC Metz,26,25.0,19,73.1,7,2023
+3714,Enisey Krasnoyarsk,26,25.6,2,7.7,1,2018
+399,Leeds United,27,24.6,18,66.7,9,2022
+4083,FC Crotone,25,27.0,6,24.0,1,2020
+465,Saint Mirren Football Club,26,26.4,18,69.2,5,2024
+48332,FK Kolos Kovalivka,23,25.9,5,21.7,2,2024
+533,Turn- und Sportgemeinschaft 1899 Hoffenheim Fußball-Spielbetriebs,31,26.2,19,61.3,12,2024
+58,Royal Sporting Club Anderlecht,30,26.0,16,53.3,10,2024
+607,Venezia Football Club,29,25.9,21,72.4,11,2024
+68608,CF Os Belenenses,30,25.7,5,16.7,0,2017
+724,FC Volendam,25,23.4,6,24.0,2,2023
+800,Atalanta Bergamasca Calcio S.p.a.,25,27.5,13,52.0,19,2024
+85465,FK Karpaty Lviv,30,25.4,7,23.3,2,2024
+979,Moreirense Futebol Clube,24,26.4,14,58.3,3,2024
+984,West Bromwich Albion,25,27.8,8,32.0,4,2020
