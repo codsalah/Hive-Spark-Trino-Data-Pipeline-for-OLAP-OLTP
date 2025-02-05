@@ -1,24 +1,20 @@
 from pyspark.sql import SparkSession
-import os
 
 # Initialize Spark Session
-spark = SparkSession.builder.appName("ReadParquet").getOrCreate()
+spark = SparkSession.builder \
+    .appName("ParquetCheck") \
+    .getOrCreate()
 
-# Path to the Star Schema directory
-base_path = "/path/to/DataSchema/Star_schema"
+# Replace this with the folder you want to check at a time
+club_dim_path = "DataSchema/Star_schema/ClubDim_parquet"
 
-# List all parquet directories
-parquet_dirs = [
-    "ClubDim_parquet",
-    "CompetitionDim_parquet",
-    "PlayersDim_parquet",
-    "TransferFact_parquet"
-]
+# Read the Parquet files
+club_dim_df = spark.read.parquet(club_dim_path)
 
-# Read all parquet files and store them in a dictionary
-dfs = {dir_name: spark.read.parquet(os.path.join(base_path, dir_name)) for dir_name in parquet_dirs}
+print("ClubDim Schema:")
+club_dim_df.printSchema()
 
-# Show data from each DataFrame
-for name, df in dfs.items():
-    print(f"\n{name} Data:")
-    df.show(5)  # Show first 5 rows
+print("\nClubDim Data Sample:")
+club_dim_df.show(5, truncate=False)
+
+print(f"\nTotal rows in ClubDim: {club_dim_df.count()}")
