@@ -2,8 +2,12 @@ from pyspark.sql import SparkSession
 from pyspark.sql.functions import col, year, quarter, month, dayofmonth, monotonically_increasing_id
 import sys
 import os
-sys.path.append('/root/Hive-Based_TransferMarket_Data_Modeling/SparkDataExploration')
 from pyspark.sql.types import StringType
+from SparkDataExploration.utils import (
+    read_csv, create_spark_session,
+    print_table, save_to_multiple_formats
+)
+
 
 class TimeDim:
     def __init__(self, spark, transfer_path, output_path):
@@ -64,7 +68,8 @@ if __name__ == "__main__":
 
     # Path to the transfer data
     transfer_path = "/home/codsalah/Downloads/archive/transfers.csv"
-    output_path = "/root/Hive-Based_TransferMarket_Data_Modeling/DataSchema/Star_schema"
+    output_path = os.path.abspath("./DataSchema/Star_schema")
+
 
     # Create an instance of TimeDim class and run transformation
     time_dim_processor = TimeDim(spark, transfer_path, output_path)
