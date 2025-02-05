@@ -1,7 +1,7 @@
 import os
 import sys
 from pyspark.sql import SparkSession
-from pyspark.sql.functions import col, sum as _sum, year
+from pyspark.sql.functions import col, sum as _sum, year, monotonically_increasing_id
 from pyspark.sql.types import IntegerType
 from SparkDataExploration.utils import (
     read_csv, create_spark_session,
@@ -23,9 +23,16 @@ class PlayerDim:
             _sum("minutes_played").alias("total_minutes_played")
         )
 
-        # Join with the player DataFrame and select relevant columns
-        players_dim = player_df.join(player_stats, "player_id", how="left").select(
-            col("player_id").cast(IntegerType()),
+        # Join with the player DataFrame
+        players_dim = player_df.join(player_stats, "player_id", how="left")
+
+        # Add surrogate key
+        players_dim = players_dim.withColumn("player_sk", monotonically_increasing_id())
+
+        # Select columns in the correct order (surrogate key first)
+        players_dim = players_dim.select(
+            col("player_sk"),  # Surrogate key first
+            col("player_id").cast(IntegerType()),  # Natural key remains
             col("name"),
             col("country_of_birth"),
             col("position"),

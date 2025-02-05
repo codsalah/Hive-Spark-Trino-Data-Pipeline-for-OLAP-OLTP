@@ -1,5 +1,5 @@
 from pyspark.sql import SparkSession
-from pyspark.sql.functions import col
+from pyspark.sql.functions import col, monotonically_increasing_id
 import sys
 sys.path.append('/root/Hive-Based_TransferMarket_Data_Modeling/SparkDataExploration')
 
@@ -16,9 +16,9 @@ class ClubsDim:
         self.spark = spark
     
     def get_clubs_dim(self, clubs_df):
-        # Extract the clubs dimension
-        clubs_dim = clubs_df.select(
-            col("club_id").cast(StringType()),
+        # Extract the clubs dimension and add surrogate key
+        clubs_dim = clubs_df.withColumn("club_sk", monotonically_increasing_id()).select(
+            col("club_id").cast(StringType()),  # Keep natural key
             col("name"),
             col("squad_size").cast(StringType()),
             col("average_age").cast(StringType()),
@@ -26,7 +26,8 @@ class ClubsDim:
             col("foreigners_percentage").cast(StringType()),
             col("national_team_players").cast(StringType()),
             col("last_season").cast(StringType())
-        )
+        )  # Add surrogate key
+        
         return clubs_dim
 
 

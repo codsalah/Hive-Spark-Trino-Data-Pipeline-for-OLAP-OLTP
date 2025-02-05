@@ -1,5 +1,5 @@
 from pyspark.sql import SparkSession
-from pyspark.sql.functions import col
+from pyspark.sql.functions import col, monotonically_increasing_id
 from SparkDataExploration.utils import (
     read_csv, create_spark_session, schema_insights, print_header,
     print_table, save_to_multiple_formats
@@ -13,15 +13,17 @@ class CompetitionDim:
         self.spark = spark
     
     def get_competition_dim(self, competition_df):
-        # Extract the competition dimension
-        competition_dim = competition_df.select(
-            col("competition_id"),
+        # Add surrogate key first
+        competition_dim = competition_df.withColumn("competition_sk", monotonically_increasing_id()).select(
+            col("competition_sk"),  # Surrogate key first
+            col("competition_id"),  # Keep natural key
             col("name"),
             col("type"),
             col("country_name"),
             col("confederation"),
             col("is_major_national_league").cast(StringType()).alias("is_major_national_league")
         )
+        
         return competition_dim
 
 
