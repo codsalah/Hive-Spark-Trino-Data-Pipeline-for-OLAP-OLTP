@@ -1,8 +1,8 @@
-CREATE EXTERNAL TABLE players_dim_avro (
+CREATE EXTERNAL TABLE players_dim_parquet (
+    player_sk BIGINT,
     player_id INT,
     name STRING,
     country_of_birth STRING,
-    date_of_birth DATE,
     position STRING,
     sub_position STRING,
     last_season INT,
@@ -13,10 +13,12 @@ CREATE EXTERNAL TABLE players_dim_avro (
     agent_name STRING,
     image_url STRING,
     url STRING,
-    goals INT,
-    assists INT,
-    minutes_played INT,
-    player_club_domestic_competition_id STRING
+    total_goals INT,
+    total_assists INT,
+    total_minutes_played INT,
+    year INT,
+    player_club_domestic_competition_id STRING,
+    date_of_birth DATE
 )
-STORED AS AVRO
-LOCATION '/AvroStore/PlayersDim';
+STORED AS PARQUET
+LOCATION '/ParquetStore/PlayersDim';
