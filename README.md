@@ -59,6 +59,9 @@ The `SparkDataModeling` folder contains scripts for transforming raw data into a
 
 2. **Fact Table**:
    - **`TransferFact.py`**: Aggregates and transforms transfer data into the `TransferFact` fact table, linking it to the dimension tables.
+  
+     ![image](https://github.com/user-attachments/assets/3a0521ca-61bf-42a3-b04d-a217aeeb8b9e)
+
 
 ---
 
