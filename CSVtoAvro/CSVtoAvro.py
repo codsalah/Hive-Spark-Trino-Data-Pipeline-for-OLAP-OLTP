@@ -79,7 +79,22 @@ data_files = {
                 {'name': 'day', 'type': 'int'}
             ]
         }
-    }
+    },
+     "TransferFact.csv": {
+        "avro_file": "transfers_fact.avro",
+        "schema": {
+            'type': 'record',
+            'name': 'Transfer',
+            'fields': [
+                {'name': 'player_id', 'type': 'int'},
+                {'name': 'transfer_year', 'type': 'int'},
+                {'name': 'total_transfer_fee', 'type': ['float', 'null']},
+                {'name': 'total_market_value', 'type': ['float', 'null']},
+                {'name': 'transfer_profit_loss', 'type': ['float', 'null']},
+                {'name': 'transfer_fee_ratio', 'type': ['float', 'null']}
+            ]
+        }
+     }
 }
 
 def convert_csv_to_avro(csv_file, avro_file, schema):
