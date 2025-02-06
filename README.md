@@ -62,6 +62,19 @@ The `SparkDataModeling` folder contains scripts for transforming raw data into a
 
 ---
 
+## CSVtoAvro
+
+### Description
+The `CSVtoAvro` folder contains a Python script that converts CSV files into **Avro** format. 
+
+### Key File
+1. **`csv_to_avro.py`**:
+   - A Python script that reads CSV files, converts them into Avro format, and saves the output as `.avro` files.
+   - Defines custom Avro schemas for each CSV file to ensure data integrity and compatibility.
+
+
+---
+
 ## HiveDWH Exploration
 
 ### Description
