@@ -49,7 +49,8 @@ class PlayerDim:
             col("total_assists").cast(IntegerType()),
             col("total_minutes_played").cast(IntegerType()),
             col("year"),
-            col("current_club_domestic_competition_id").alias("player_club_domestic_competition_id")
+            col("current_club_domestic_competition_id").alias("player_club_domestic_competition_id"),
+            col("date_of_birth").cast(DateType())  
         )
         
         return players_dim
