@@ -2,7 +2,7 @@ import os
 import sys
 from pyspark.sql import SparkSession
 from pyspark.sql.functions import col, sum as _sum, year, monotonically_increasing_id
-from pyspark.sql.types import IntegerType
+from pyspark.sql.types import IntegerType, DateType  
 from SparkDataExploration.utils import (
     read_csv, create_spark_session,
     print_table, save_to_multiple_formats
