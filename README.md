@@ -27,6 +27,8 @@ The `spark data exploration` folder contains code for exploring and analyzing da
      - Comparing two players in the same position.
      - Analyzing transfer data between clubs.
 
+---
+
 ## Staging Database
 
 ### Description
@@ -41,7 +43,8 @@ Key Files
 2. **DDL Files**:
    - Contains SQL scripts (`DDL`) for creating the database schema (tables, indexes, etc.) in the staging database.
    - These scripts define the structure of the tables where the raw data will be loaded.
-  
+
+---
 
 ## Spark Data Modeling
 
@@ -57,7 +60,24 @@ The `SparkDataModeling` folder contains scripts for transforming raw data into a
 2. **Fact Table**:
    - **`TransferFact.py`**: Aggregates and transforms transfer data into the `TransferFact` fact table, linking it to the dimension tables.
 
+---
 
+## HiveDWH Exploration
+
+### Description
+The `HiveDWH Exploration` folder contains scripts for loading data into **HDFS** (Hadoop Distributed File System) and **Hive** .  
+
+1. **`load_data_to_hdfs.sh`**:
+   - A Bash script that uploads dimension and fact tables (in CSV, Parquet and Avro formats) from the local file system to HDFS.
+   - Creates necessary directories in HDFS if they don't already exist.
+   - Verifies the upload by checking the contents of the HDFS directories.
+
+2. **`LoadDataToHive.hql`**:
+   - An HQL script that creates Hive tables and loads data from HDFS into these tables.
+   - Defines the schema for dimension and fact tables in Hive.
+   - Supports loading data from **multiple formats (CSV, Parquet, Avro)**.
+
+---
 
 
 
