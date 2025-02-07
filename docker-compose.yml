@@ -10,7 +10,9 @@ services:
       - CORE_CONF_fs_defaultFS=hdfs://namenode:8020
     volumes:
       - hadoop_namenode:/hadoop/dfs/name
-      - /home/codsalah/Documents/git_repos/Hive-Based_TransferMarket_Data_Modeling/DataSchema:/data  # Mount local data directory
+      - /home/codsalah/Documents/git_repos/Hive-Based_TransferMarket_Data_Modeling-1/DataSchema/Star_schema:/data  # Mount local data directory
+      - ./HiveDWHExploration/LoadDataToHDFS/uploadToHDFS.sh:/tmp/uploadToHDFS.sh
+      - ./DataSchema:/tmp/DataSchema
     ports:
       - 9870:9870  # Namenode Web UI
     networks:
@@ -46,8 +48,9 @@ services:
       - hive-metastore
       - namenode
     environment:
-      HIVE_CORE_CONF_javax_jdo_option_ConnectionURL: jdbc:postgresql://hive-metastore/metastore
-      HIVE_SITE_CONF_hive_metastore_uris: thrift://hive-metastore:9083
+      - HIVE_CORE_CONF_javax_jdo_option_ConnectionURL=jdbc:postgresql://hive-metastore/metastore
+      - HIVE_SITE_CONF_hive_metastore_uris=thrift://hive-metastore:9083
+      - CORE_CONF_fs_defaultFS=hdfs://namenode:8020
     networks:
       - spark_net
 
