@@ -41,6 +41,15 @@ The script logs:
 - File upload status
 - Upload verification results
 
+## Loaded data and summarization of HDFS
+![alt text](Imgs/1.png)
+
+![alt text](Imgs/2.png)
+
+![alt text](Imgs/3.png)
+
+![alt text](Imgs/4.png)
+
 ---
 
 **Author**: Salah
