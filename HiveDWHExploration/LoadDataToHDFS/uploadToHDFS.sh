@@ -10,15 +10,15 @@ HDFS_TIME_DIM_PARQUET="/CsvStore/TimeDim_parquet"
 HDFS_CLUB_DIM_PARQUET="/CsvStore/ClubDim_parquet"
 HDFS_COMPETITION_DIM_PARQUET="/CsvStore/CompetitionDim_parquet"
 
-LOCAL_PLAYER_DIM_CSV="./DataSchema/Star_schema/PlayersDim_csv"
-LOCAL_TIME_DIM_CSV="./DataSchema/Star_schema/TimeDim_csv"
-LOCAL_CLUB_DIM_CSV="./DataSchema/Star_schema/ClubDim_csv"
-LOCAL_COMPETITION_DIM_CSV="./DataSchema/Star_schema/CompetitionDim_csv"
+LOCAL_PLAYER_DIM_CSV="/HiveDWHExploration/DataSchema/Star_schema/PlayersDim_csv"
+LOCAL_TIME_DIM_CSV="/HiveDWHExploration/DataSchema/Star_schema/TimeDim_csv"
+LOCAL_CLUB_DIM_CSV="/HiveDWHExploration/DataSchema/Star_schema/ClubDim_csv"
+LOCAL_COMPETITION_DIM_CSV="/HiveDWHExploration/DataSchema/Star_schema/CompetitionDim_csv"
 
-LOCAL_PLAYER_DIM_PARQUET="./DataSchema/Star_schema/PlayersDim_parquet"
-LOCAL_TIME_DIM_PARQUET="./DataSchema/Star_schema/TimeDim_parquet"
-LOCAL_CLUB_DIM_PARQUET="./DataSchema/Star_schema/ClubDim_parquet"
-LOCAL_COMPETITION_DIM_PARQUET="./DataSchema/Star_schema/CompetitionDim_parquet"
+LOCAL_PLAYER_DIM_PARQUET="/HiveDWHExploration/DataSchema/Star_schema/PlayersDim_parquet"
+LOCAL_TIME_DIM_PARQUET="/HiveDWHExploration/DataSchema/Star_schema/TimeDim_parquet"
+LOCAL_CLUB_DIM_PARQUET="/HiveDWHExploration/DataSchema/Star_schema/ClubDim_parquet"
+LOCAL_COMPETITION_DIM_PARQUET="/HiveDWHExploration/DataSchema/Star_schema/CompetitionDim_parquet"
 
 
 
@@ -60,7 +60,7 @@ upload_to_hdfs() {
 echo "Verifying the upload..."
 
 verify_upload() {
-    local hdfs_dir=$1
+    local hdfs_dir=$1 
     echo "Checking HDFS directory: $hdfs_dir"
 
     files=$(hdfs dfs -ls $hdfs_dir)
@@ -73,6 +73,18 @@ verify_upload() {
         echo "$files"
     fi
 }
+
+# Upload CSV files
+upload_to_hdfs "$LOCAL_PLAYER_DIM_CSV" "$HDFS_PLAYER_DIM_CSV" "csv"
+upload_to_hdfs "$LOCAL_TIME_DIM_CSV" "$HDFS_TIME_DIM_CSV" "csv"
+upload_to_hdfs "$LOCAL_CLUB_DIM_CSV" "$HDFS_CLUB_DIM_CSV" "csv"
+upload_to_hdfs "$LOCAL_COMPETITION_DIM_CSV" "$HDFS_COMPETITION_DIM_CSV" "csv"
+
+# Upload Parquet files
+upload_to_hdfs "$LOCAL_PLAYER_DIM_PARQUET" "$HDFS_PLAYER_DIM_PARQUET" "parquet"
+upload_to_hdfs "$LOCAL_TIME_DIM_PARQUET" "$HDFS_TIME_DIM_PARQUET" "parquet"
+upload_to_hdfs "$LOCAL_CLUB_DIM_PARQUET" "$HDFS_CLUB_DIM_PARQUET" "parquet"
+upload_to_hdfs "$LOCAL_COMPETITION_DIM_PARQUET" "$HDFS_COMPETITION_DIM_PARQUET" "parquet"
 
 
 verify_upload $HDFS_PLAYER_DIM_CSV
