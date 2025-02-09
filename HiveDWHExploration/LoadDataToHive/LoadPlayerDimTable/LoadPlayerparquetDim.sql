@@ -21,4 +21,4 @@ CREATE EXTERNAL TABLE players_dim_parquet (
     date_of_birth DATE
 )
 STORED AS PARQUET
-LOCATION '/ParquetStore/PlayersDim';
+LOCATION 'hdfs://namenode/Star_schema/PlayersDim_parquet';

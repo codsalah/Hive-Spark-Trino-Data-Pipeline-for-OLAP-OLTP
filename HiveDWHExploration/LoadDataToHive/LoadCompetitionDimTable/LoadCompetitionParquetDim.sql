@@ -8,4 +8,4 @@ CREATE EXTERNAL TABLE competition_dim_parquet (
     is_major_national_league BOOLEAN
 )
 STORED AS PARQUET
-LOCATION '/ParquetStore/CompetitionDim';
+LOCATION 'hdfs://namenode/Star_schema/CompetitionDim';

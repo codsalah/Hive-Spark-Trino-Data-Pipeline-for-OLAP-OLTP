@@ -11,4 +11,4 @@ CREATE EXTERNAL TABLE club_dim_csv (
 ROW FORMAT DELIMITED
 FIELDS TERMINATED BY ','
 STORED AS TEXTFILE
-LOCATION '/CsvStore/ClubDim';
+LOCATION 'hdfs://namenode/Star_schema/ClubDim';

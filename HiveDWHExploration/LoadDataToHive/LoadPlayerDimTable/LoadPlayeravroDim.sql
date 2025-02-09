@@ -21,4 +21,4 @@ CREATE EXTERNAL TABLE players_dim_avro (
     date_of_birth DATE
 )
 STORED AS AVRO
-LOCATION '/AvroStore/PlayersDim';
+LOCATION 'hdfs://namenode/Star_schema/PlayersDim';

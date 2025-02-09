@@ -7,4 +7,4 @@ CREATE EXTERNAL TABLE time_dim_parquet (
     day INT
 )
 STORED AS PARQUET
-LOCATION '/ParquetStore/TimeDim';
+LOCATION 'hdfs://namenode/Star_schema/TimeDim';

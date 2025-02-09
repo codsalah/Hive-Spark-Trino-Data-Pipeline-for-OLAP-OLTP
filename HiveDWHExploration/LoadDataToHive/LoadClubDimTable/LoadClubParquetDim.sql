@@ -9,4 +9,4 @@ CREATE EXTERNAL TABLE club_dim_parquet (
     last_season INT
 )
 STORED AS PARQUET
-LOCATION '/ParquetStore/ClubDim';
+LOCATION 'hdfs://namenode/Star_schema/ClubDim';

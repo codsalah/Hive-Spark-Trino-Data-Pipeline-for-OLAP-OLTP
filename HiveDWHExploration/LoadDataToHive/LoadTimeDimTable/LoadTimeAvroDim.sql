@@ -7,4 +7,4 @@ CREATE EXTERNAL TABLE time_dim_avro (
     day INT
 )
 STORED AS AVRO
-LOCATION '/AvroStore/TimeDim';
+LOCATION 'hdfs://namenode/Star_schema/TimeDim';

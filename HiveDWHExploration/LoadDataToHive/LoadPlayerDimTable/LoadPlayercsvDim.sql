@@ -23,4 +23,4 @@ CREATE EXTERNAL TABLE players_dim_csv (
 ROW FORMAT DELIMITED
 FIELDS TERMINATED BY ','
 STORED AS TEXTFILE
-LOCATION '/CsvStore/PlayersDim';
+LOCATION 'hdfs://namenode/Star_schema/PlayersDim';

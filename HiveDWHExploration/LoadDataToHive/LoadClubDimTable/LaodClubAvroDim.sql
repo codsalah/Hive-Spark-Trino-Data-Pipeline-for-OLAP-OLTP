@@ -9,4 +9,4 @@ CREATE EXTERNAL TABLE club_dim_avro (
     last_season INT
 )
 STORED AS AVRO
-LOCATION '/AvroStore/ClubDim';
+LOCATION 'hdfs://namenode/Star_schema/ClubDim';

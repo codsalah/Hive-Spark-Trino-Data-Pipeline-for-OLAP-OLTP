@@ -8,6 +8,6 @@ CREATE EXTERNAL TABLE competition_dim_csv (
     is_major_national_league BOOLEAN
 )
 ROW FORMAT DELIMITED
-FIELDS TERMINATED BY ','
+FIELDS TERMINATED BY ','  -- Delimiter for CSV
 STORED AS TEXTFILE
-LOCATION '/CsvStore/CompetitionDim';
+LOCATION 'hdfs://namenode/Star_schema/CompetitionDim/';

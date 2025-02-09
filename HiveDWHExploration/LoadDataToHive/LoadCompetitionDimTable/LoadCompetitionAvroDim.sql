@@ -8,4 +8,4 @@ CREATE EXTERNAL TABLE competition_dim_avro (
     is_major_national_league BOOLEAN
 )
 STORED AS AVRO
-LOCATION '/AvroStore/CompetitionDim';
+LOCATION 'hdfs://namenode/Star_schema/CompetitionDim';

@@ -9,4 +9,4 @@ CREATE EXTERNAL TABLE time_dim_csv (
 ROW FORMAT DELIMITED
 FIELDS TERMINATED BY ','
 STORED AS TEXTFILE
-LOCATION '/CsvStore/TimeDim';
+LOCATION 'hdfs://namenode/Star_schema/TimeDim';
