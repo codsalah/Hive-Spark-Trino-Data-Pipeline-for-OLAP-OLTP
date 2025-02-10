@@ -34,6 +34,7 @@ Execute the script to load data into Hive tables:
 ```
 ![alt text](Imgs/image.png)
 
+![alt text](Imgs/image2.png)
 
 ### 3️⃣ **Verify Data in Hive**  
 Log into the Hive shell and check tables:  
@@ -42,3 +43,11 @@ hive
 SHOW TABLES;
 SELECT * FROM <table_name> LIMIT 10;
 ```
+
+![alt text](Imgs/image3.png)
+
+![alt text](Imgs/image4.png)
+
+---
+
+**Authors**: Salah, Shahd
