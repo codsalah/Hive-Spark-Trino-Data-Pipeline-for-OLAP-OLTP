@@ -1,108 +1,78 @@
-# TransferMarket Data Modeling Project
+# Hive-Spark-Trino Data Pipeline for OLAP & OLTP
 
-## Project Overview
-This project involves modeling the TransferMarket dataset into a **Star Schema** and implementing the model on **HDFS** using **CSV**, **Avro**, and **Parquet** formats. The project also includes a comparison between these formats in terms of **size**, **write speed**, and **read speed**. Additionally, multiple compression levels and algorithms are tested for Avro and Parquet formats.
+## Introduction
+This project aims to build a **Data Warehouse (DWH)** that supports **Online Analytical Processing (OLAP) using Hive** and **Online Transaction Processing (OLTP) using Trino**. The system automatically and simultaneously processes both workloads to efficiently answer business queries using modern big data technologies.
 
----
+## Data Flow & Architecture
 
-## Resources
-- **Dataset**: [TransferMarket Dataset on Kaggle](https://www.kaggle.com/dataset-link)
+![Hive Datawarehouse Exploration](HiveDWHExploration/LoadDataToHDFS/Imgs/pipeline.png)
 
----
-
-## Data Schema 
-### ERD Traditional schema
-![image](https://github.com/user-attachments/assets/f7e2764f-9bfd-439b-bb3f-a578fd56f33b)
-
-## Spark Data Exploration
-
-### Description
-The `spark data exploration` folder contains code for exploring and analyzing data using **Apache Spark**. The code is written in **Python** and utilizes the **PySpark** library to perform data transformations, filtering, and analytical queries.
-
-   - Contains functions to analyze data related to **clubs**, **players**, and **transfers**.
-   - Performs operations such as:
-     - Filtering clubs by name.
-     - Analyzing specific club metrics compared to others in the same domestic competition.
-     - Exploring player data, including market value, squad size, and contract expiration.
-     - Comparing two players in the same position.
-     - Analyzing transfer data between clubs.
-
----
-
-## Staging Database
-
-### Description
-The `staging database` folder contains scripts and files related to extracting data from source files (CSV) and loading it into a **staging database**. This is typically the first step in an ETL (Extract, Transform, Load) pipeline, where raw data is ingested into a database for further processing.
-
-Key Files
-1. **`Extract_from_Source_to_Staging.py`**:
-   - A Python script that reads CSV files and loads the data into a MySQL database.
-   - Uses **Pandas** for reading CSV files in chunks and **SQLAlchemy** for database connectivity.
-   - Handles large datasets efficiently by processing them in chunks.
-
-2. **DDL Files**:
-   - Contains SQL scripts (`DDL`) for creating the database schema (tables, indexes, etc.) in the staging database.
-   - These scripts define the structure of the tables where the raw data will be loaded.
-
----
-
-## Spark Data Modeling
-
-### Description
-The `SparkDataModeling` folder contains scripts for transforming raw data into a **star schema** using **Apache Spark**. The star schema is a common data modeling technique used in data warehousing, consisting of **fact tables** and **dimension tables**. This folder includes scripts for creating dimension tables (`ClubDim`, `CompetitionDim`, `PlayerDim`, `TimeDim`) and a fact table (`TransferFact`).
-
-1. **Dimension Tables**:
-   - **`ClubDim.py`**: Transforms raw club data into the `ClubDim` dimension table.
-   - **`CompetitionDim.py`**: Transforms raw competition data into the `CompetitionDim` dimension table.
-   - **`PlayerDim.py`**: Transforms raw player data into the `PlayerDim` dimension table.
-   - **`TimeDim.py`**: Extracts time-related data (e.g., transfer dates) and creates the `TimeDim` dimension table.
-
-2. **Fact Table**:
-   - **`TransferFact.py`**: Aggregates and transforms transfer data into the `TransferFact` fact table, linking it to the dimension tables.
-  
-     ![Image](https://github.com/user-attachments/assets/21b1959f-880a-41e8-8b72-3632f11a2498)
+The data flow follows these key stages:
+1. **Data Ingestion**: Data arrives in multiple formats (CSV, Parquet, Avro).
+2. **Staging Layer**: Raw data is first loaded into MySQL.
+3. **Data Exploration**: Apache Spark is used for simple queries and data quality checks.
+4. **Data Modeling**: Spark processes and transforms the data into the required structure.
+5. **Storage in HDFS**: The transformed data is stored in **HDFS**.
+6. **Querying**:
+   - **Hive for OLAP**: Used for analytical processing from HDFS.
+   - **Trino for OLTP**: Used for transactional queries from HDFS.
 
 
----
+## Technologies Used
+- **Apache Spark** – Data exploration and modeling
+- **HDFS (Hadoop Distributed File System)** – Distributed storage
+- **Apache Hive** – OLAP querying
+- **Trino** – OLTP querying
+- **Docker** – Containerization for deployment
+- **Bash** – Automation scripts
+- **MySQL** – Staging layer for initial data storage
 
-## CSVtoAvro
+## Setup & Installation
+To run this project, ensure you have the following dependencies installed:
 
-### Description
-The `CSVtoAvro` folder contains a Python script that converts CSV files into **Avro** format. 
+### Data Updated Resource
+[TransferMarket Dataset on Kaggle](https://www.kaggle.com/datasets/davidcariboo/player-scores)
 
-### Key File
-1. **`csv_to_avro.py`**:
-   - A Python script that reads CSV files, converts them into Avro format, and saves the output as `.avro` files.
-   - Defines custom Avro schemas for each CSV file to ensure data integrity and compatibility.
+### DWH Star Schema
+[Data Schema](./DataSchema)
 
+### Prerequisites
+- **Docker** 
+- **Apache Spark** 
+- **Hadoop & HDFS** 
+- **Apache Hive**
+- **Trino**
+- **MySQL**
+- **Bash scripting support**
 
----
+### Installation Steps
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/codsalah/Hive-Spark-Trino-Data-Pipeline-for-OLAP-OLTP
+   cd Hive-Spark-Trino-Data-Pipeline-for-OLAP-OLTP/
+   ```
+2. Start the necessary services using Docker:
+   ```bash
+   docker-compose up -d
+   ```
+3. Load initial data into MySQL staging:
+   ```bash
+   bash scripts/load_hive_data.sh
+   ```
+4. Verify the data in Hive and Trino:
+   ```sql
+   SELECT * FROM hive_database.table_name;
+   SELECT * FROM trino_database.table_name;
+   ```
 
-## HiveDWH Exploration
+## Usage & Workflow
+- Load raw data into MySQL staging.
+- Use Spark to explore and process the data.
+- Store processed data in HDFS.
+- Query data using Hive for analytical workloads.
+- Query data using Trino for transactional workloads.
 
-### Description
-The `HiveDWH Exploration` folder contains scripts for loading data into **HDFS** (Hadoop Distributed File System) and **Hive** .  
-
-1. **`load_data_to_hdfs.sh`**:
-   - A Bash script that uploads dimension and fact tables (in CSV, Parquet and Avro formats) from the local file system to HDFS.
-   - Creates necessary directories in HDFS if they don't already exist.
-   - Verifies the upload by checking the contents of the HDFS directories.
-
-2. **`LoadDataToHive.hql`**:
-   - An HQL script that creates Hive tables and loads data from HDFS into these tables.
-   - Defines the schema for dimension and fact tables in Hive.
-   - Supports loading data from **multiple formats (CSV, Parquet, Avro)**.
-
----
-
-
-
-
-
-
-
-
-
-
-
-
+## Contributors
+- [@codsalah](https://github.com/codsalah) Salah Algamasy
+- [@shahdhamdi](https://github.com/shahdhamdi) Shahd Hamdi
+- [@salma-nour-eldeen6](https://github.com/salma-nour-eldeen6) Salma Nour-Eldeen
