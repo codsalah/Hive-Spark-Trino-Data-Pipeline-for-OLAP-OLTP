@@ -35,9 +35,8 @@ SELECT club_id,
        RANK() OVER (ORDER BY average_age DESC) AS age_rank
 FROM club_dim_csv
 LIMIT 10;
-
 ```
-
+![alt text](LoadDataToHive/Imgs/Img3.png)
 
 ### Query 4: Subquery to Select Clubs with Above-Average Squad Size
 This query uses a subquery to filter clubs that have a squad size greater than the overall average squad size.
@@ -51,6 +50,7 @@ LIMIT 10;
 
 ```
 
+![alt text](LoadDataToHive/Imgs/Img4.png)
 
 
 ### Query 5: Use a CASE Expression on CompetitionDim_csv
@@ -70,4 +70,4 @@ LIMIT 10;
 
 ```
 
-
+![alt text](LoadDataToHive/Imgs/Img5.png)
