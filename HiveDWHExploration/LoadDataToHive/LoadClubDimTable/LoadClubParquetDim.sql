@@ -1,12 +1,12 @@
 CREATE EXTERNAL TABLE club_dim_parquet (
-    club_id INT,
+    club_id STRING,
     name STRING,
-    squad_size INT,
+    squad_size STRING,
     average_age DOUBLE,
-    foreigners_number INT,
+    foreigners_number STRING,
     foreigners_percentage DOUBLE,
-    national_team_players INT,
-    last_season INT
+    national_team_players STRING,
+    last_season STRING
 )
 STORED AS PARQUET
 LOCATION 'hdfs://namenode/Star_schema/ClubDim';

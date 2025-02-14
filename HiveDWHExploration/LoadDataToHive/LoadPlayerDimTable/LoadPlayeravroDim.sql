@@ -6,19 +6,19 @@ CREATE EXTERNAL TABLE players_dim_avro (
     position STRING,
     sub_position STRING,
     last_season INT,
-    height_in_cm INT,
+    height_in_cm FLOAT,
     current_club_id INT,
     current_club_name STRING,
     country_of_citizenship STRING,
     agent_name STRING,
     image_url STRING,
     url STRING,
-    total_goals INT,
-    total_assists INT,
-    total_minutes_played INT,
+    total_goals FLOAT, 
+    total_assists FLOAT,
+    total_minutes_played FLOAT,
     year INT,
     player_club_domestic_competition_id STRING,
-    date_of_birth DATE
+    date_of_birth STRING 
 )
 STORED AS AVRO
-LOCATION 'hdfs://namenode/Star_schema/PlayersDim';
+LOCATION 'hdfs://namenode/Star_schema/players_dim_avro';
